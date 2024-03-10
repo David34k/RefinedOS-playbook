@@ -1,0 +1,150 @@
+---
+title: Configuration
+description: Applies the RefinedOS configuration
+privilege: TrustedInstaller
+actions:
+- !writeStatus: {status: 'Configuring system'}
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'DisablePrivacyExperience', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion', value: 'EditionSubManufacturer', data: 'RefinedOS Team', type: REG_SZ}
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion', value: 'EditionSubstring', data: 'RefinedOS', type: REG_SZ}
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion', value: 'EditionSubVersion', data: 'RefinedOS', type: REG_SZ}
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation', value: 'Manufacturer', data: 'RefinedOS Team', type: REG_SZ}
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation', value: 'Model', data: 'RefinedOS Team', type: REG_SZ}
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation', value: 'SupportURL', data: '', type: REG_SZ}
+- !run: {exe: 'w32tm', args: '/config /syncfromflags:manual /manualpeerlist:"0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org 3.pool.ntp.org"'}
+- !run: {exe: 'net', args: 'start w32time'}
+- !run: {exe: 'w32tm', args: '/config /update'}
+- !run: {exe: 'w32tm', args: '/resync'}
+- !run: {exe: 'fsutil', args: 'behavior set disablelastaccess 1'}
+- !run: {exe: 'fsutil', args: 'behavior set disabledeletenotify 0'}
+- !writeStatus: {status: 'Configuring system settings'}
+- !run: {exe: 'net', args: 'user defaultuser0 /delete'}
+- !run: {exe: 'DISM', args: '/Online /Set-ReservedStorageState /State:Disabled'}
+- !run: {exe: 'lodctr', args: '/r'}
+- !run: {exe: 'lodctr', args: '/r'}
+- !run: {exe: 'winmgmt', args: '/resyncperf'}
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer', value: 'SettingsPageVisibility', data: 'hide:quiethours;tabletmode;project;crossdevice;remotedesktop;mobile-devices;network-cellular;network-wificalling;network-airplanemode;nfctransactions;maps;sync;speech;easeofaccess-magnifier;easeofaccess-narrator;easeofaccess-speechrecognition;easeofaccess-eyecontrol;privacy-speech;privacy-general;privacy-speechtyping;privacy-feedback;privacy-activityhistory;privacy-location;privacy-callhistory;privacy-eyetracker;privacy-messaging;privacy-automaticfiledownloads;windowsupdate;delivery-optimization;windowsdefender;backup;recovery;findmydevice;windowsinsider', type: REG_SZ}
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Font Drivers', value: 'Adobe Type Manager', operation: delete}
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows', value: 'DisableATMFD', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer', value: 'NoAutorun', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization', value: 'NoLockScreenCamera', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance', value: 'fAllowFullControl', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance', value: 'fAllowToGetHelp', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance', value: 'fEnableChatControl', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters', value: 'DisableCompression', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters', value: 'DisableBandwidthThrottling', data: '1', type: REG_DWORD}
+- !registryKey: {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Network\NewNetworkWindowOff', operation: add}
+- !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters', value: 'DisableParallelAandAAAA', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient', value: 'DisableSmartNameResolution', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\WlanSvc\AnqpCache', value: 'OsuRegistrationStatus', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\.NetFramework\v4.0.30319', value: 'SchUseStrongCrypto', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319', value: 'SchUseStrongCrypto', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Control', value: 'SvcHostSplitThresholdInKB', data: '4294967295', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DiskQuota', value: 'Enable', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Internet Explorer\Main', value: 'Start Page', data: 'https://refinedos.uk/', type: REG_SZ}
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat', value: 'AITEnable', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat', value: 'AllowTelemetry', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat', value: 'DisableInventory', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat', value: 'DisableUAR', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat', value: 'DisableEngine', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat', value: 'DisablePCA', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ImmersiveShell', value: 'SignInMode', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3', value: '1806', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Attachments', value: 'SaveZoneInformation', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\Control Panel\Mouse', value: 'MouseSpeed', data: '0', type: REG_SZ}
+- !registryValue: {path: 'HKCU\Control Panel\Mouse', value: 'MouseThreshold1', data: '0', type: REG_SZ}
+- !registryValue: {path: 'HKCU\Control Panel\Mouse', value: 'MouseThreshold2', data: '0', type: REG_SZ}
+- !registryValue: {path: 'HKCU\Control Panel\Desktop', value: 'MouseWheelRouting', data: '0', type: REG_SZ}
+- !registryValue: {path: 'HKCU\Control Panel\Desktop', value: 'MouseHoverTime', data: '20', type: REG_SZ}
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Ease of Access', value: 'selfscan', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Ease of Access', value: 'selfvoice', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\Control Panel\Accessibility', value: 'Warning Sounds', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\Control Panel\Accessibility', value: 'Sound on Activation', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\Control Panel\Accessibility\SoundSentry', value: 'WindowsEffect', data: '0', type: REG_SZ}
+- !registryValue: {path: 'HKCU\Control Panel\Accessibility\SlateLaunch', value: 'LaunchAT', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\Control Panel\Accessibility\HighContrast', value: 'Flags', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\Control Panel\Accessibility\Keyboard Response', value: 'Flags', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\Control Panel\Accessibility\MouseKeys', value: 'Flags', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\Control Panel\Accessibility\StickyKeys', value: 'Flags', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\Control Panel\Accessibility\ToggleKeys', value: 'Flags', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\Control Panel\Cursors', value: 'GestureVisualization', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\Control Panel\Cursors', value: 'ContactVisualization', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\InputPersonalization', value: 'RestrictImplicitInkCollection', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\InputPersonalization', value: 'RestrictImplicitTextCollection', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\InputPersonalization\TrainedDataStore', value: 'HarvestContacts', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Personalization\Settings', value: 'AcceptedPrivacyPolicy', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\TabletPC', value: 'PreventHandwritingDataSharing', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\HandwritingErrorReports', value: 'PreventHandwritingErrorReports', data: '1', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\TabletTip\1.7', value: 'EnableSpellchecking', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\TabletTip\1.7', value: 'EnableTextPrediction', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\TabletTip\1.7', value: 'EnablePredictionSpaceInsertion', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\TabletTip\1.7', value: 'EnableDoubleTapSpace', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\TabletTip\1.7', value: 'EnableAutocorrection', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Input\Settings', value: 'InsightsEnabled', data: '0', type: REG_DWORD}
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\System', value: 'RSoPLogging', data: '0', type: REG_DWORD}
+- !registryKey: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{088e3905-0323-4b02-9826-5d99428e115f}', operation: add}
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run', value: 'SecurityHealth', operation: delete}
+- !run: {exe: 'bcdedit', args: '/set description "RefinedOS 22H2"'}
+- !run: {exe: 'bcdedit', args: '/timeout 10'}
+- !run: {exe: 'bcdedit', args: '/deletevalue useplatformclock'}
+- !run: {exe: 'bcdedit', args: '/set disabledynamictick yes'}
+- !run: {exe: 'bcdedit', args: '/set bootmenupolicy Legacy'}
+- !run: {exe: 'bcdedit', args: '/set hypervisorlaunchtype off'}
+- !run: {exe: 'bcdedit', args: '/set vm no'}
+- !run: {exe: 'bcdedit', args: '/set vsmlaunchtype Off'}
+- !run: {exe: 'bcdedit', args: '/set loadoptions DISABLE-LSA-ISO,DISABLE-VBS'}
+- !run: {exeDir: true, exe: 'POWER.cmd', weight: 20}
+- !run: {exeDir: true, exe: 'STARTMENU.cmd', weight: 20}
+- !run: {exeDir: true, exe: 'WALLPAPER.cmd', weight: 20}
+- !run: {exeDir: true, exe: 'PFP.cmd', weight: 20}
+- !run: {exeDir: true, exe: 'FINALIZE.cmd', weight: 100}
+- !cmd: {command: 'for /f %a in (''dir /b "%TEMP%" /a:-d'') do del /q "%TEMP%\%a"', weight: 10}
+- !cmd: {command: 'for /f %a in (''dir /b "%TEMP%" /a:d ^| findstr /v /c:"AME"'') do rmdir /q /s "%TEMP%\%a"', weight: 10}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+    
