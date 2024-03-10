@@ -10,7 +10,7 @@ actions:
 - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion', value: 'EditionSubVersion', data: 'RefinedOS', type: REG_SZ}
 - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation', value: 'Manufacturer', data: 'RefinedOS Team', type: REG_SZ}
 - !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation', value: 'Model', data: 'RefinedOS Team', type: REG_SZ}
-- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation', value: 'SupportURL', data: '', type: REG_SZ}
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation', value: 'SupportURL', data: 'https://refinedos.uk/', type: REG_SZ}
 - !run: {exe: 'w32tm', args: '/config /syncfromflags:manual /manualpeerlist:"0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org 3.pool.ntp.org"'}
 - !run: {exe: 'net', args: 'start w32time'}
 - !run: {exe: 'w32tm', args: '/config /update'}
@@ -41,7 +41,7 @@ actions:
 - !registryValue: {path: 'HKLM\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319', value: 'SchUseStrongCrypto', data: '1', type: REG_DWORD}
 - !registryValue: {path: 'HKLM\SYSTEM\CurrentControlSet\Control', value: 'SvcHostSplitThresholdInKB', data: '4294967295', type: REG_DWORD}
 - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DiskQuota', value: 'Enable', data: '0', type: REG_DWORD}
-- !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Internet Explorer\Main', value: 'Start Page', data: 'https://refinedos.uk/', type: REG_SZ}
+- !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Internet Explorer\Main', value: 'Start Page', data: 'https://discord.gg/CdCpmuxzqZ', type: REG_SZ}
 - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat', value: 'AITEnable', data: '0', type: REG_DWORD}
 - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat', value: 'AllowTelemetry', data: '0', type: REG_DWORD}
 - !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat', value: 'DisableInventory', data: '1', type: REG_DWORD}
