@@ -1,0 +1,448 @@
+title: Registry Edits
+actions:
+  
+  
+  
+  - !writeStatus: {status: 'Registry Edits'}
+   
+  # Personalize
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize', value: 'ColorPrevalence', type: REG_DWORD, data: '00000000'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize', value: 'EnableTransparency', type: REG_DWORD, data: '00000000'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize', value: 'AppsUseLightTheme', type: REG_DWORD, data: '00000000'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize', value: 'SystemUsesLightTheme', type: REG_DWORD, data: '00000000'}
+
+  # Registry values for Content Delivery Manager settings
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'ContentDeliveryAllowed', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'OemPreInstalledAppsEnabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'PreInstalledAppsEnabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'PreInstalledAppsEverEnabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SilentInstalledAppsEnabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContentEnabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-310093Enabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-338393Enabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-353694Enabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-353696Enabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-338387Enabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'RotatingLockScreenOverlayEnabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-338388Enabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SystemPaneSuggestionsEnabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-338389Enabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SoftLandingEnabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'FeatureManagementEnabled', data: '0', type: REG_DWORD}
+  
+  # Registry keys for Content Delivery Manager subscriptions
+  - !registryKey {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager\Subscriptions'}
+  - !registryKey {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager\SuggestedApps'}
+
+  # Registry values for Storage Policy in StorageSense
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy', value: '01', type: REG_DWORD, data: '1'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy', value: '1024', type: REG_DWORD, data: '1'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy', value: '2048', type: REG_DWORD, data: '30'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy', value: '04', type: REG_DWORD, data: '1'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy', value: '32', type: REG_DWORD, data: '0'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy', value: '02', type: REG_DWORD, data: '0'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy', value: '128', type: REG_DWORD, data: '0'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy', value: '08', type: REG_DWORD, data: '1'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy', value: '256', type: REG_DWORD, data: '30'}
+
+  # RefinedOS NTLite Settings
+  - !registryValue: {path: 'HKCU\SYSTEM\ControlSet001\Control\CrashControl', value: 'AutoReboot', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SYSTEM\ControlSet001\Control\CrashControl', value: 'CrashDumpEnabled', type: REG_DWORD, data: '3'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\PushNotifications', value: 'NoCloudApplicationNotification', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Control Panel\Desktop', value: 'ScreenSaverIsSecure', type: REG_SZ, data: '1'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Control Panel\Desktop', value: 'ScreenSaverIsSecure', type: REG_SZ, data: '1'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Search', value: 'SearchboxTaskbarMode', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Search', value: 'SearchboxTaskbarMode', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'TaskbarMn', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'TaskbarMn', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\Windows Chat', value: 'ChatIcon', type: REG_DWORD, data: '3'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer', value: 'HideSCAMeetNow', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Communications', value: 'ConfigureChatAutoInstall', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer', value: 'EnableAutoTray', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Explorer', value: 'EnableAutoTray', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\OperationStatusManager', value: 'EnthusiastMode', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Explorer\OperationStatusManager', value: 'EnthusiastMode', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers', value: 'DisableAutoplay', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers', value: 'DisableAutoplay', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'FolderContentsInfoTip', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'FolderContentsInfoTip', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'LaunchTo', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'LaunchTo', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities', value: 'ApplicationDescription', type: REG_SZ, data: '@%ProgramFiles%\Windows Photo Viewer\photoviewer.dll,-3069', option: "configure-lpv"}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities', value: 'ApplicationName', type: REG_SZ, data: '@%ProgramFiles%\Windows Photo Viewer\photoviewer.dll,-3009', option: "configure-lpv"}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations', value: '.tif', type: REG_SZ, data: 'PhotoViewer.FileAssoc.Tiff', option: "configure-lpv"}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations', value: '.tiff', type: REG_SZ, data: 'PhotoViewer.FileAssoc.Tiff', option: "configure-lpv"}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations', value: '.jpg', type: REG_SZ, data: 'PhotoViewer.FileAssoc.Tiff', option: "configure-lpv"}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations', value: '.wdp', type: REG_SZ, data: 'PhotoViewer.FileAssoc.Wdp', option: "configure-lpv"}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations', value: '.jfif', type: REG_SZ, data: 'PhotoViewer.FileAssoc.Tiff', option: "configure-lpv"}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations', value: '.dib', type: REG_SZ, data: 'PhotoViewer.FileAssoc.Tiff', option: "configure-lpv"}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations', value: '.png', type: REG_SZ, data: 'PhotoViewer.FileAssoc.Tiff', option: "configure-lpv"}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations', value: '.bmp', type: REG_SZ, data: 'PhotoViewer.FileAssoc.Tiff', option: "configure-lpv"}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations', value: '.jpe', type: REG_SZ, data: 'PhotoViewer.FileAssoc.Tiff', option: "configure-lpv"}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations', value: '.jpeg', type: REG_SZ, data: 'PhotoViewer.FileAssoc.Tiff', option: "configure-lpv"}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations', value: '.gif', type: REG_SZ, data: 'PhotoViewer.FileAssoc.Tiff', option: "configure-lpv"}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations', value: '.jxr', type: REG_SZ, data: 'PhotoViewer.FileAssoc.Tiff', option: "configure-lpv"}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'ShowInfoTip', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'ShowInfoTip', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'ShowSyncProviderNotifications', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'ShowSyncProviderNotifications', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'HideFileExt', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'HideFileExt', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SYSTEM\ControlSet001\Control\Session Manager\Power', value: 'HiberbootEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings', value: 'ShowHibernateOption', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'ShutdownWithoutLogon', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Software\NVIDIA Corporation\NVControlPanel2\Client', value: 'OptInOrOutPreference', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\NVIDIA Corporation\NVControlPanel2\Client', value: 'OptInOrOutPreference', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\System', value: 'AllowExperimentation', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsConsumerFeatures', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\WcmSvc\wifinetworkmanager\features', value: 'PaidWifi', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\WcmSvc\wifinetworkmanager\features', value: 'WiFiSenseOpen', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SilentInstalledAppsEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SilentInstalledAppsEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\AppCompat', value: 'DisableInventory', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\InputPersonalization\TrainedDataStore', value: 'HarvestContacts', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\InputPersonalization\TrainedDataStore', value: 'HarvestContacts', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Policies\Microsoft\InputPersonalization', value: 'RestrictImplicitTextCollection', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Policies\Microsoft\InputPersonalization', value: 'RestrictImplicitTextCollection', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Software\Policies\Microsoft\InputPersonalization', value: 'RestrictImplicitInkCollection', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Policies\Microsoft\InputPersonalization', value: 'RestrictImplicitInkCollection', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'DontDisplayLastUserName', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Siuf\Rules', value: 'NumberOfSIUFInPeriod', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Siuf\Rules', value: 'NumberOfSIUFInPeriod', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Siuf\Rules', value: 'PeriodInNanoSeconds', operation: delete}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Siuf\Rules', value: 'PeriodInNanoSeconds', operation: delete}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications', value: 'GlobalUserDisabled', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications', value: 'GlobalUserDisabled', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Search', value: 'BackgroundAppGlobalToggle', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Search', value: 'BackgroundAppGlobalToggle', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo', value: 'Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo', value: 'Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo', value: 'Id', operation: delete}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo', value: 'Id', operation: delete}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\AdvertisingInfo', value: 'DisabledByGroupPolicy', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Privacy', value: 'TailoredExperiencesWithDiagnosticDataEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Privacy', value: 'TailoredExperiencesWithDiagnosticDataEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableTailoredExperiencesWithDiagnosticData', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE\AppSettings', value: 'Skype-UserConsentAccepted', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Control Panel\International\User Profile', value: 'HttpAcceptLanguageOptOut', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Control Panel\International\User Profile', value: 'HttpAcceptLanguageOptOut', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\System', value: 'EnableActivityFeed', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\System', value: 'PublishUserActivities', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\System', value: 'UploadUserActivities', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SystemPaneSuggestionsEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SystemPaneSuggestionsEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-338388Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-338388Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\InputPersonalization', value: 'AllowInputPersonalization', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Personalization\Settings', value: 'AcceptedPrivacyPolicy', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Personalization\Settings', value: 'AcceptedPrivacyPolicy', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\TextInput', value: 'AllowLinguisticDataCollection', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'PreInstalledAppsEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'PreInstalledAppsEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'PreInstalledAppsEverEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'PreInstalledAppsEverEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'RemediationRequired', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'RemediationRequired', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-314559Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-314559Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-280815Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-280815Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-314563Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-314563Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'OemPreInstalledAppsEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'OemPreInstalledAppsEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Search', value: 'BingSearchEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Search', value: 'BingSearchEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\input\TIPC', value: 'Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Input\TIPC', value: 'Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Input\TIPC', value: 'Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer', value: 'ShowFrequent', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Explorer', value: 'ShowFrequent', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-310093Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-310093Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer', value: 'ShowRecent', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Explorer', value: 'ShowRecent', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement', value: 'ScoobeSystemSettingEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement', value: 'ScoobeSystemSettingEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager\Context\CloudExperienceHostIntent\Wireless', value: 'ScoobeCheckCompleted', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager\Context\CloudExperienceHostIntent\Wireless', value: 'ScoobeCheckCompleted', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\AppHost', value: 'EnableWebContentEvaluation', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\AppHost', value: 'EnableWebContentEvaluation', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\WlanSvc\AnqpCache', value: 'OsuRegistrationStatus', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Internet Explorer\FlipAhead', value: 'FPEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wekyb3d8bbwe\MicrosoftEdge\PhishingFilter', value: 'Enabledv9', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wekyb3d8bbwe\MicrosoftEdge\PhishingFilter', value: 'Enabledv9', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wekyb3d8bbwe\MicrosoftEdge\PhishingFilter', value: 'PreventOverride', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wekyb3d8bbwe\MicrosoftEdge\PhishingFilter', value: 'PreventOverride', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Internet Explorer\PhishingFilter', value: 'Enabledv9', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer', value: 'SmartScreenEnabled', type: REG_SZ, data: 'Off'}
+  - !registryValue: {path: 'HKCU\Software\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsSpotlightFeatures', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsSpotlightFeatures', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Software\Policies\Microsoft\Windows\CloudContent', value: 'ConfigureWindowsSpotlight', type: REG_DWORD, data: '2'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Policies\Microsoft\Windows\CloudContent', value: 'ConfigureWindowsSpotlight', type: REG_DWORD, data: '2'}
+  - !registryValue: {path: 'HKCU\Software\Policies\Microsoft\Windows\CloudContent', value: 'IncludeEnterpriseSpotlight', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Policies\Microsoft\Windows\CloudContent', value: 'IncludeEnterpriseSpotlight', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsSpotlightFeatures', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsSpotlightFeatures', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Software\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsSpotlightWindowsWelcomeExperience', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsSpotlightWindowsWelcomeExperience', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Software\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsSpotlightOnActionCenter', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsSpotlightOnActionCenter', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Software\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsSpotlightOnSettings', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Policies\Microsoft\Windows\CloudContent', value: 'DisableWindowsSpotlightOnSettings', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableThirdPartySuggestions', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableSoftLanding', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SoftLandingEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SoftLandingEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'RotatingLockScreenEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'RotatingLockScreenEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'RotatingLockScreenOverlayEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'RotatingLockScreenOverlayEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-202914Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-202914Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-338387Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-338387Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-338389Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-338389Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-353698Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-353698Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderDocuments', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderDocuments_ProviderSet', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderDownloads', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderDownloads_ProviderSet', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderFileExplorer', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderFileExplorer_ProviderSet', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderHomeGroup', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderHomeGroup_ProviderSet', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderMusic', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderMusic_ProviderSet', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderNetwork', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderNetwork_ProviderSet', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderPersonalFolder', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderPersonalFolder_ProviderSet', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderPictures', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderPictures_ProviderSet', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderSettings', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderSettings_ProviderSet', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderVideos', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderVideos_ProviderSet', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'EnableFirstLogonAnimation', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\System\GameConfigStore', value: 'GameDVR_FSEBehavior', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\System\GameConfigStore', value: 'GameDVR_FSEBehavior', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'BypassNRO', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-280810Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-280810Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-280811Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-280811Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SYSTEM\Setup\LabConfig', value: 'BypassTPMCheck', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SYSTEM\Setup\LabConfig', value: 'BypassCPUCheck', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SYSTEM\Setup\LabConfig', value: 'BypassSecureBootCheck', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SYSTEM\Setup\MoSetup', value: 'AllowUpgradesWithUnsupportedTPMOrCPU', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\Control Panel\UnsupportedHardwareNotificationCache', value: 'SV1', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Control Panel\UnsupportedHardwareNotificationCache', value: 'SV1', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Control Panel\UnsupportedHardwareNotificationCache', value: 'SV2', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Control Panel\UnsupportedHardwareNotificationCache', value: 'SV2', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard', value: 'EnableVirtualizationBasedSecurity', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SYSTEM\Policies\Microsoft\Windows\DeviceGuard', value: 'HVCIMATRequired', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SYSTEM\ControlSet001\Control\DeviceGuard', value: 'Locked', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SYSTEM\ControlSet001\Control\DeviceGuard', value: 'RequirePlatformSecurityFeatures', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SYSTEM\ControlSet001\Control\DeviceGuard', value: 'EnableVirtualizationBasedSecurity', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SYSTEM\ControlSet001\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity', value: 'Enabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SYSTEM\ControlSet001\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity', value: 'ChangedInBootCycle', operation: delete}
+  - !registryValue: {path: 'HKCU\SYSTEM\ControlSet001\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity', value: 'HVCIMATRequired', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SYSTEM\ControlSet001\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity', value: 'Locked', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SYSTEM\ControlSet001\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity', value: 'WasEnabledBy', operation: delete}
+  - !registryValue: {path: 'HKCU\SYSTEM\ControlSet001\Control\Lsa', value: 'LsaCfgFlags', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\Software\Microsoft\Windows Security Health\State', value: 'AccountProtection_MicrosoftAccount_Disconnected', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKU\S-1-5-18\Software\Microsoft\Windows Security Health\State', value: 'AccountProtection_MicrosoftAccount_Disconnected', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Speech_OneCore\Preferences', value: 'ModelDownloadAllowed', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata', value: 'PreventDeviceMetadataFromNetwork', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\DriverSearching', value: 'DontSearchWindowsUpdate', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\DriverSearching', value: 'DriverUpdateWizardWuSearchEnabled', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Services\Pending\7971f918-a847-4430-9279-4a52d1efe18d', value: 'RegisterWithAU', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate', value: 'ExcludeWUDriversInQualityUpdate', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings', value: 'ExcludeWUDriversInQualityUpdate', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings', value: 'HideMCTLink', type: REG_DWORD, data: '1'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings', value: 'RestartNotificationsAllowed2', type: REG_DWORD, data: '0'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search', value: 'BingSearchEnabled', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings', value: 'IsAADCloudSearchEnabled', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings', value: 'IsDeviceSearchHistoryEnabled', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings', value: 'IsMSACloudSearchEnabled', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings', value: 'SafeSearchMode', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\Windows Search', value: 'ConnectedSearchUseWeb', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\Windows Search', value: 'DisableWebSearch', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\Windows Search', value: 'EnableDynamicContentInWSB', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer', value: 'DisableSearchBoxSuggestions', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search', value: 'SearchboxTaskbarMode', data: '1', type: REG_DWORD}
+  
+   # Error Reporting
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting', value: 'Disabled', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\PCHealth\ErrorReporting', value: 'DoReport', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting', value: 'Disabled', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\DeviceInstall\Settings', value: 'DisableSendGenericDriverNotFoundToWER', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\DeviceInstall\Settings', value: 'DisableSendRequestAdditionalSoftwareToWER', data: '1', type: REG_DWORD}
+
+   # DataQueueSize
+  - !registryValue: {path: 'HKCU\SYSTEM\CurrentControlSet\Services\mouclass\Parameters', value: 'MouseDataQueueSize', data: '16', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters', value: 'KeyboardDataQueueSize', data: '16', type: REG_DWORD}
+   
+   # adding info 
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer', value: 'SettingsPageVisibility', data: 'hide:quiethours;tabletmode;project;crossdevice;remotedesktop;mobile-devices;network-cellular;network-wificalling;network-airplanemode;nfctransactions;maps;sync;speech;easeofaccess-magnifier;easeofaccess-narrator;easeofaccess-speechrecognition;easeofaccess-eyecontrol;privacy-speech;privacy-general;privacy-speechtyping;privacy-feedback;privacy-activityhistory;privacy-location;privacy-callhistory;privacy-eyetracker;privacy-messaging;privacy-automaticfiledownloads;windowsupdate;delivery-optimization;windowsdefender;backup;recovery;findmydevice;windowsinsider', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Font Drivers', value: 'Adobe Type Manager', operation: delete}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows', value: 'DisableATMFD', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer', value: 'NoAutorun', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\Personalization', value: 'NoLockScreenCamera', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SYSTEM\CurrentControlSet\Control\Remote Assistance', value: 'fAllowFullControl', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SYSTEM\CurrentControlSet\Control\Remote Assistance', value: 'fAllowToGetHelp', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SYSTEM\CurrentControlSet\Control\Remote Assistance', value: 'fEnableChatControl', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters', value: 'DisableCompression', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters', value: 'DisableBandwidthThrottling', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters', value: 'DisableParallelAandAAAA', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient', value: 'DisableSmartNameResolution', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\WlanSvc\AnqpCache', value: 'OsuRegistrationStatus', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\.NetFramework\v4.0.30319', value: 'SchUseStrongCrypto', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319', value: 'SchUseStrongCrypto', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SYSTEM\CurrentControlSet\Control', value: 'SvcHostSplitThresholdInKB', data: '4294967295', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows NT\DiskQuota', value: 'Enable', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Internet Explorer\Main', value: 'Start Page', data: 'https://discord.gg/CdCpmuxzqZ', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\AppCompat', value: 'AITEnable', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\AppCompat', value: 'AllowTelemetry', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\AppCompat', value: 'DisableInventory', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\AppCompat', value: 'DisableUAR', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\AppCompat', value: 'DisableEngine', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\AppCompat', value: 'DisablePCA', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ImmersiveShell', value: 'SignInMode', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3', value: '1806', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Attachments', value: 'SaveZoneInformation', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\Control Panel\Mouse', value: 'MouseSpeed', data: '0', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\Control Panel\Mouse', value: 'MouseThreshold1', data: '0', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\Control Panel\Mouse', value: 'MouseThreshold2', data: '0', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\Control Panel\Desktop', value: 'MouseWheelRouting', data: '0', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\Control Panel\Desktop', value: 'MouseHoverTime', data: '20', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Ease of Access', value: 'selfscan', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Ease of Access', value: 'selfvoice', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\Control Panel\Accessibility', value: 'Warning Sounds', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\Control Panel\Accessibility', value: 'Sound on Activation', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\Control Panel\Accessibility\SoundSentry', value: 'WindowsEffect', data: '0', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\Control Panel\Accessibility\SlateLaunch', value: 'LaunchAT', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\Control Panel\Accessibility\HighContrast', value: 'Flags', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\Control Panel\Accessibility\Keyboard Response', value: 'Flags', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\Control Panel\Accessibility\MouseKeys', value: 'Flags', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\Control Panel\Accessibility\StickyKeys', value: 'Flags', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\Control Panel\Accessibility\ToggleKeys', value: 'Flags', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\Control Panel\Cursors', value: 'GestureVisualization', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\Control Panel\Cursors', value: 'ContactVisualization', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\InputPersonalization', value: 'RestrictImplicitInkCollection', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\InputPersonalization', value: 'RestrictImplicitTextCollection', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\InputPersonalization\TrainedDataStore', value: 'HarvestContacts', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Personalization\Settings', value: 'AcceptedPrivacyPolicy', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\TabletPC', value: 'PreventHandwritingDataSharing', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\HandwritingErrorReports', value: 'PreventHandwritingErrorReports', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\TabletTip\1.7', value: 'EnableSpellchecking', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\TabletTip\1.7', value: 'EnableTextPrediction', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\TabletTip\1.7', value: 'EnablePredictionSpaceInsertion', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\TabletTip\1.7', value: 'EnableDoubleTapSpace', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\TabletTip\1.7', value: 'EnableAutocorrection', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Input\Settings', value: 'InsightsEnabled', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\System', value: 'RSoPLogging', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run', value: 'SecurityHealth', operation: delete}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'ContentDeliveryAllowed', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'OemPreInstalledAppsEnabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'PreInstalledAppsEnabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'PreInstalledAppsEverEnabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SilentInstalledAppsEnabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContentEnabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-310093Enabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-338393Enabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-353694Enabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-353696Enabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-338387Enabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'RotatingLockScreenOverlayEnabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-338388Enabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SystemPaneSuggestionsEnabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SubscribedContent-338389Enabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'SoftLandingEnabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager', value: 'FeatureManagementEnabled', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy', value: '01', type: REG_DWORD, data: '1'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy', value: '1024', type: REG_DWORD, data: '1'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy', value: '2048', type: REG_DWORD, data: '30'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy', value: '04', type: REG_DWORD, data: '1'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy', value: '32', type: REG_DWORD, data: '0'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy', value: '02', type: REG_DWORD, data: '0'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy', value: '128', type: REG_DWORD, data: '0'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy', value: '08', type: REG_DWORD, data: '1'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy', value: '256', type: REG_DWORD, data: '30'}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ReserveManager', value: 'MiscPolicyInfo', data: '2', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ReserveManager', value: 'PassedPolicy', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ReserveManager', value: 'ShippedWithReserves', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\Family options', value: 'UILockdown', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\Device performance and health', value: 'UILockdown', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\Account protection', value: 'UILockdown', data: '1', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\GameBar', value: 'AllowAutoGameMode', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\GameBar', value: 'AutoGameModeEnabled', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile', value: 'SystemResponsiveness', data: '10', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SYSTEM\CurrentControlSet\Control\PriorityControl', value: 'Win32PrioritySeparation', data: '40', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SYSTEM\CurrentControlSet\Services\mouclass\Parameters', value: 'MouseDataQueueSize', data: '16', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters', value: 'KeyboardDataQueueSize', data: '16', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\System', value: 'EnableActivityFeed', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Feeds', value: 'ShellFeedsTaskbarViewMode', data: '2', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds', value: 'EnableFeeds', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Dsh', value: 'AllowNewsAndInterests', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\PolicyManager\default\NewsAndInterests\AllowNewsAndInterests', value: 'value', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds', value: 'EnableFeeds', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ImmersiveShell', value: 'SignInMode', data: '1', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MultiTaskingView\AllUpView', value: 'Enabled', operation: 'delete'}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'ShowTaskViewButton', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\Control Panel\Desktop', value: 'FontSmoothing', data: '2', type: REG_SZ}
+  - !registryValue {path: 'HKCU\Control Panel\Desktop', value: 'UserPreferencesMask', data: '9012038010000000', type: REG_BINARY}
+  - !registryValue {path: 'HKCU\Control Panel\Desktop', value: 'DragFullWindows', data: '1', type: REG_SZ}
+  - !registryValue {path: 'HKCU\Control Panel\Desktop\WindowMetrics', value: 'MinAnimate', data: '0', type: REG_SZ}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'ListviewAlphaSelect', data: '1', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'IconsOnly', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'TaskbarAnimations', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'ListviewShadow', data: '1', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects', value: 'VisualFXSetting', data: '3', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\DWM', value: 'EnableAeroPeek', data: '0', type: REG_DWORD}
+  - !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\DWM', value: 'AlwaysHibernateThumbnails', data: '0', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'DisablePrivacyExperience', data: '1', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion', value: 'EditionSubManufacturer', data: 'RefinedOS Team', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion', value: 'EditionSubstring', data: 'RefinedOS', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion', value: 'EditionSubVersion', data: 'RefinedOS', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation', value: 'Manufacturer', data: 'RefinedOS Team', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation', value: 'Model', data: 'RefinedOS Team', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\OEMInformation', value: 'SupportURL', data: 'https://refinedos.uk/', type: REG_SZ}
+
+    # Disable UAC
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'EnableLUA', data: '00000000', type: REG_DWORD}
+
+ 
+    # performace tweaks 
+  - !registryValue: {path: 'HKCU\SYSTEM\CurrentControlSet\Control\Power\PowerThrottling', value: 'PowerThrottlingOff', data: '00000001', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile', value: 'NetworkThrottlingIndex', data: '0000000a', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile', value: 'SystemResponsiveness', data: '00000000', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games', value: 'Affinity', data: '00000000', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games', value: 'Clock Rate', data: '00002710', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games', value: 'GPU Priority', data: '00000008', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games', value: 'Priority', data: '00000006', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games', value: 'Scheduling Category', data: 'High', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games', value: 'SFIO Priority', data: 'High', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\System\GameConfigStore', value: 'GameDVR_Enabled', data: '00000000', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\System\GameConfigStore', value: 'GameDVR_FSEBehaviorMode', data: '00000002', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\System\GameConfigStore', value: 'GameDVR_HonorUserFSEBehaviorMode', data: '00000000', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\System\GameConfigStore', value: 'GameDVR_DXGIHonorFSEWindowsCompatible', data: '00000001', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\System\GameConfigStore', value: 'GameDVR_EFSEFeatureFlags', data: '00000000', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\Control Panel\Desktop', value: 'AutoEndTasks', data: '1', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\Control Panel\Desktop', value: 'HungAppTimeout', data: '1000', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\Control Panel\Desktop', value: 'WaitToKillAppTimeout', data: '2000', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\Control Panel\Desktop', value: 'LowLevelHooksTimeout', data: '1000', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\Control Panel\Desktop', value: 'MenuShowDelay', data: '0', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\SYSTEM\CurrentControlSet\Control', value: 'WaitToKillServiceTimeout', data: '2000', type: REG_SZ}
+  - !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\Maintenance', value: 'MaintenanceDisabled', data: '00000001', type: REG_DWORD}
+  - !registryValue: {path: 'HKCU\SYSTEM\CurrentControlSet\Control\Power', value: 'HibernateEnabled', data: '00000000', type: REG_DWORD}
+  - !registryValue: {path: 'HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\PriorityControl', value: 'Win32PrioritySeparation', data: '40', type: REG_DWORD}
+  - !registryValue: {path: 'HKEY_CURRENT_USER\Control Panel\Mouse', value: 'MouseSensitivity', data: '10', type: REG_SZ}
+  - !registryValue: {path: 'HKEY_CURRENT_USER\Control Panel\Mouse', value: 'SmoothMouseXCurve', data: '00,00,00,00,00,00,00,00,C0,CC,0C,00,00,00,00,00,80,99,19,00,00,00,00,00,40,66,26,00,00,00,00,00,00,33,33,00,00,00,00,00', type: REG_BINARY}
+  - !registryValue: {path: 'HKEY_CURRENT_USER\Control Panel\Mouse', value: 'SmoothMouseYCurve', data: '00,00,00,00,00,00,00,00,00,00,38,00,00,00,00,00,00,00,70,00,00,00,00,00,00,00,00,00,A8,00,00,00,00,00,00,00,E0,00,00,00,00,00,00,00', type: REG_BINARY}
+  - !registryValue: {path: 'HKEY_USERS\.DEFAULT\Control Panel\Mouse', value: 'MouseSpeed', data: '0', type: REG_SZ}
+  - !registryValue: {path: 'HKEY_USERS\.DEFAULT\Control Panel\Mouse', value: 'MouseThreshold1', data: '0', type: REG_SZ}
+  - !registryValue: {path: 'HKEY_USERS\.DEFAULT\Control Panel\Mouse', value: 'MouseThreshold2', data: '0', type: REG_SZ}
