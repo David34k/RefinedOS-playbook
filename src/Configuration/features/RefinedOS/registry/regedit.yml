@@ -1,0 +1,259 @@
+---
+title: regedit 
+description: RefinedOS regedits
+privilege: TrustedInstaller
+actions:
+
+ 
+ # credits to my friend melodytheneko who kindly let me use some of her tweaks yo u can find out more about the twekas here 
+ # https://sites.google.com/view/melodystweaks/basictweaks
+- !writeStatus: {status: "Tweaking registry"}
+- !registryValue: {path: 'HKCU\Control Panel\Accessibility\MouseKeys', value: 'MaximumSpeed', operation: delete} # Deletes the registry value 'MaximumSpeed' under 'HKCU\Control Panel\Accessibility\MouseKeys'.
+- !registryValue: {path: 'HKCU\Control Panel\Accessibility\MouseKeys', value: 'TimeToMaximumSpeed', operation: delete} # Deletes the registry value 'TimeToMaximumSpeed' under 'HKCU\Control Panel\Accessibility\MouseKeys'.
+- !registryKey: {path: 'HKCU\Control Panel\Accessibility\MouseKeys', operation: add} # Adds the registry key 'HKCU\Control Panel\Accessibility\MouseKeys'.
+- !registryValue: {path: 'HKCU\Control Panel\Mouse', value: 'MouseSpeed', type: REG_SZ, data: '0'} # Sets the value of 'MouseSpeed' under 'HKCU\Control Panel\Mouse' to '0' as a string.
+- !registryValue: {path: 'HKCU\Control Panel\Mouse', value: 'MouseThreshold1', type: REG_SZ, data: '0'} # Sets the value of 'MouseThreshold1' under 'HKCU\Control Panel\Mouse' to '0' as a string.
+- !registryValue: {path: 'HKCU\Control Panel\Mouse', value: 'MouseThreshold2', type: REG_SZ, data: '0'} # Sets the value of 'MouseThreshold2' under 'HKCU\Control Panel\Mouse' to '0' as a string.
+- !registryValue: {path: 'HKU\.DEFAULT\Control Panel\Mouse', value: 'MouseSpeed', type: REG_SZ, data: '0'} # Sets the value of 'MouseSpeed' under 'HKU\.DEFAULT\Control Panel\Mouse' to '0' as a string.
+- !registryValue: {path: 'HKU\.DEFAULT\Control Panel\Mouse', value: 'MouseThreshold1', type: REG_SZ, data: '0'} # Sets the value of 'MouseThreshold1' under 'HKU\.DEFAULT\Control Panel\Mouse' to '0' as a string.
+- !registryValue: {path: 'HKU\.DEFAULT\Control Panel\Mouse', value: 'MouseThreshold2', type: REG_SZ, data: '0'} # Sets the value of 'MouseThreshold2' under 'HKU\.DEFAULT\Control Panel\Mouse' to '0' as a string.
+- !registryKey: {path: 'HKCU\Software\Microsoft\Internet Explorer\LowRegistry\Audio\PolicyConfig\PropertyStore', operation: add} # Adds the registry key 'HKCU\Software\Microsoft\Internet Explorer\LowRegistry\Audio\PolicyConfig\PropertyStore'.
+- !registryValue: {path: 'HKLM\System\CurrentControlSet\Control\TimeZoneInformation', value: 'RealTimeIsUniversal', type: REG_DWORD, data: '1'} # Sets the value of 'RealTimeIsUniversal' under 'HKLM\System\CurrentControlSet\Control\TimeZoneInformation' to '1' as a DWORD.
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'EnableLinkedConnections', type: REG_DWORD, data: '1'} # Sets the value of 'EnableLinkedConnections' under 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System' to '1' as a DWORD.
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\vgc.exe', value: 'MitigationOptions', type: REG_BINARY, data: '000000000001000000000000000000000000000000000000'} # Sets the value of 'MitigationOptions' under 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\vgc.exe' to the specified binary data.
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\vgc.exe', value: 'MitigationAuditOptions', type: REG_BINARY, data: '000000000000000000000000000000000000000000000000'} # Sets the value of 'MitigationAuditOptions' under 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\vgc.exe' to the specified binary data.
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\vgc.exe', value: 'EAFModules', type: REG_SZ, data: ''} # Sets the value of 'EAFModules' under 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\vgc.exe' to an empty string.
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\osu!.exe', value: 'MitigationOptions', type: REG_BINARY, data: '000021000000000000000000000000000000000000000000'} # Sets the value of 'MitigationOptions' under 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\osu!.exe' to the specified binary data.
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\osu!.exe', value: 'MitigationAuditOptions', type: REG_BINARY, data: '000000000000000000000000000000000000000000000000'} # Sets the value of 'MitigationAuditOptions' under 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\osu!.exe' to the specified binary data.
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\osu!.exe', value: 'EAFModules', type: REG_SZ, data: ''} # Sets the value of 'EAFModules' under 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\osu!.exe' to an empty string.
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\EdgeUpdate', value: 'InstallDefault', type: REG_DWORD, data: '0'} # Sets the value of 'InstallDefault' under 'HKLM\SOFTWARE\Policies\Microsoft\EdgeUpdate' to '0' as a DWORD.
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\EdgeUpdate', value: 'Install{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}', type: REG_DWORD, data: '0'} # Sets the value of 'Install{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}' under 'HKLM\SOFTWARE\Policies\Microsoft\EdgeUpdate' to '0' as a DWORD.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'EnableLUA', type: REG_DWORD, data: '0'} # Disables User Account Control (UAC) prompts.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'EnableInstallerDetection', type: REG_DWORD, data: '0'} # Disables Windows Installer detection.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'EnableSecureUIAPaths', type: REG_DWORD, data: '0'} # Disables secure UI Automation (UIA) paths.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'EnableUIADesktopToggle', type: REG_DWORD, data: '0'} # Disables UIA desktop toggle.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'ValidateAdminCodeSignatures', type: REG_DWORD, data: '0'} # Disables validation of admin code signatures.
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Communications', value: 'ConfigureChatAutoInstall', type: REG_DWORD, data: '0'} # Sets the value of 'ConfigureChatAutoInstall' under 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Communications' to '0' as a DWORD.
+- !registryValue: {path: 'HKLM\SYSTEM\ControlSet001\Control\Session Manager\Kernel', value: 'DisableTsx', type: REG_DWORD, data: '0'} # Sets the value of 'DisableTsx' under 'HKLM\SYSTEM\ControlSet001\Control\Session Manager\Kernel' to '0' as a DWORD.
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize', value: 'ColorPrevalence', type: REG_DWORD, data: '0'} # Sets the value of 'ColorPrevalence' under 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize' to '0' as a DWORD.
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize', value: 'EnableTransparency', type: REG_DWORD, data: '0'} # Sets the value of 'EnableTransparency' under 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize' to '0' as a DWORD.
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize', value: 'AppsUseLightTheme', type: REG_DWORD, data: '0'} # Sets the value of 'AppsUseLightTheme' under 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize' to '0' as a DWORD.
+- !registryValue: {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize', value: 'SystemUsesLightTheme', type: REG_DWORD, data: '0'} # Sets the value of 'SystemUsesLightTheme' under 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize' to '0' as a DWORD.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'ConsentPromptBehaviorAdmin', type: REG_DWORD, data: '0'} # Disables the UAC prompt for administrators.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'EnableLUA', type: REG_DWORD, data: '0'} # Disables User Account Control (UAC).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'PromptOnSecureDesktop', type: REG_DWORD, data: '0'} # Disables the Secure Desktop for UAC prompts.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'FilterAdministratorToken', type: REG_DWORD, data: '0'} # Enables full token elevation without requiring user consent.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'EnableInstallerDetection', type: REG_DWORD, data: '0'} # Disables Windows Installer detection.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'ConsentPromptBehaviorUser', type: REG_DWORD, data: '0'} # Disables the UAC prompt for standard users.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'EnableSecureUIAPaths', type: REG_DWORD, data: '0'} # Disables the secure path for UIAutomation.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'EnableVirtualization', type: REG_DWORD, data: '0'} # Disables Virtualization Based Security (VBS).
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\SmartScreen', value: 'ConfigureAppInstallControlEnabled', type: REG_DWORD, data: '1'} # Enables SmartScreen app install control.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\SmartScreen', value: 'ConfigureAppInstallControl', type: REG_SZ, data: 'Anywhere'} # Sets SmartScreen to allow app installs from anywhere.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\WDI\{9c5a40da-b965-4fc3-8781-88dd50a6299d}', value: 'ScenarioExecutionEnabled', type: REG_DWORD, data: '0'} # Disables scenario execution for the specified Windows Diagnostic Infrastructure (WDI) scenario.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection', value: 'AllowTelemetry', type: REG_DWORD, data: '0'} # Disables telemetry data collection.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection', value: 'AllowTelemetry', type: REG_DWORD, data: '0'} # Disables telemetry data collection.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection', value: 'AllowDeviceNameInTelemetry', type: REG_DWORD, data: '0'} # Disables device name in telemetry data.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection', value: 'MaxTelemetryAllowed', type: REG_DWORD, data: '0'} # Sets maximum telemetry allowed to 0.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection', value: 'DoNotShowFeedbackNotifications', type: REG_DWORD, data: '1'} # Disables feedback notifications.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack', value: 'ShowedToastAtLevel', type: REG_DWORD, data: '1'} # Shows toast at level.
+- !registryValue {path: 'HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\Diagtrack-Listener', value: 'Start', type: REG_DWORD, data: '0'} # Disables Diagtrack listener.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat', value: 'AITEnable', type: REG_DWORD, data: '0'} # Disables Application Compatibility Telemetry (AIT).
+- !registryValue {path: 'HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\AppCompat', value: 'AITEnable', type: REG_DWORD, data: '0'} # Disables AIT for 32-bit applications.
+- !registryValue {path: 'HKCU\Software\Policies\Microsoft\Windows\EdgeUI', value: 'DisableMFUTracking', type: REG_DWORD, data: '1'} # Disables Most Frequently Used (MFU) tracking in Microsoft Edge.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\EdgeUI', value: 'DisableMFUTracking', type: REG_DWORD, data: '1'} # Disables MFU tracking in Edge.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\AppV\CEIP', value: 'CEIPEnable', type: REG_DWORD, data: '0'} # Disables Customer Experience Improvement Program (CEIP) for Microsoft Application Virtualization (App-V).
+- !registryValue {path: 'HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\AppV\CEIP', value: 'CEIPEnable', type: REG_DWORD, data: '0'} # Disables CEIP for App-V 32-bit.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\SQMClient\Windows', value: 'CEIPEnable', type: REG_DWORD, data: '0'} # Disables CEIP for Software Quality Metrics (SQM) client.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Messenger\Client', value: 'CEIP', type: REG_DWORD, data: '2'} # Disables CEIP for Microsoft Messenger.
+- !registryValue {path: 'HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Messenger\Client', value: 'CEIP', type: REG_DWORD, data: '2'} # Disables CEIP for 32-bit Microsoft Messenger.
+- !registryValue {path: 'HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\HandwritingErrorReports', value: 'PreventHandwritingErrorReports', type: REG_DWORD, data: '1'} # Prevents handwriting error reports.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\HandwritingErrorReports', value: 'PreventHandwritingErrorReports', type: REG_DWORD, data: '1'} # Prevents handwriting error reports.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\TabletPC', value: 'PreventHandwritingDataSharing', type: REG_DWORD, data: '1'} # Prevents handwriting data sharing.
+- !registryValue {path: 'HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\TabletPC', value: 'PreventHandwritingDataSharing', type: REG_DWORD, data: '1'} # Prevents handwriting data sharing for 32-bit applications.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Biometrics', value: 'Enabled', type: REG_DWORD, data: '0'} # Disables biometrics.
+- !registryValue {path: 'HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Biometrics', value: 'Enabled', type: REG_DWORD, data: '0'} # Disables biometrics for 32-bit applications.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\ScPnP', value: 'EnableScPnP', type: REG_DWORD, data: '0'} # Disables Smart Card Plug and Play service.
+- !registryValue {path: 'HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\ScPnP', value: 'EnableScPnP', type: REG_DWORD, data: '0'} # Disables Smart Card Plug and Play service for 32-bit applications.
+- !registryValue {path: 'HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\UEV\Agent', value: 'Enabled', type: REG_DWORD, data: '0'} # Disables User Experience Virtualization (UE-V) agent.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\UEV\Agent', value: 'Enabled', type: REG_DWORD, data: '0'} # Disables UE-V agent.
+- !registryValue {path: 'HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\UEV\Agent', value: 'RegisterInboxTemplates', type: REG_SZ, data: '-'} # Disables registering UE-V inbox templates for 32-bit applications.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\UEV\Agent', value: 'RegisterInboxTemplates', type: REG_SZ, data: '-'} # Disables registering UE-V inbox templates.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\UEV\Agent\Configuration', value: 'SyncOverMeteredNetworkWhenRoaming', type: REG_DWORD, data: '0'} # Disables syncing settings over metered connections when roaming.
+- !registryValue {path: 'HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\UEV\Agent\Configuration', value: 'SyncOverMeteredNetworkWhenRoaming', type: REG_DWORD, data: '0'} # Disables syncing settings over metered connections when roaming for 32-bit applications.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\UEV\Agent\Configuration', value: 'SyncOverMeteredNetwork', type: REG_DWORD, data: '0'} # Disables syncing settings over metered connections.
+- !registryValue {path: 'HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\UEV\Agent\Configuration', value: 'SyncOverMeteredNetwork', type: REG_DWORD, data: '0'} # Disables syncing settings over metered connections for 32-bit applications.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\UEV\Agent\Configuration', value: 'SyncEnabled', type: REG_DWORD, data: '0'} # Disables UE-V syncing.
+- !registryValue {path: 'HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\UEV\Agent\Configuration', value: 'SyncEnabled', type: REG_DWORD, data: '0'} # Disables UE-V syncing for 32-bit applications.
+- !registryValue {path: 'HKLM\SYSTEM\CurrentControlSet\Services\NetBT\Parameters', value: 'EnableLMHOSTS', type: REG_DWORD, data: '0'} # Disables LMHOSTS lookup.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer', value: 'NoNetConnectDisconnect', type: REG_DWORD, data: '1'} # Disables the ability to disconnect network drives.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'DisableAutomaticRestartSignOn', type: REG_DWORD, data: '1'} # Disables automatic sign-in and lock of the last interactive user after a restart.
+- !registryValue {path: 'HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\TabletTip\1.7', value: 'DisablePrediction', type: REG_DWORD, data: '1'} # Disables text prediction in Tablet PC Input Panel for 32-bit applications.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\TabletTip\1.7', value: 'DisablePrediction', type: REG_DWORD, data: '1'} # Disables text prediction in Tablet PC Input Panel.
+- !registryValue {path: 'HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Policies\Explorer', value: 'AllowOnlineTips', type: REG_DWORD, data: '0'} # Disables online tips for 32-bit applications.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer', value: 'AllowOnlineTips', type: REG_DWORD, data: '0'} # Disables online tips.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\default\Settings\AllowOnlineTips', value: 'value', type: REG_DWORD, data: '0'} # Disables online tips in Windows policy settings.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableSoftLanding', type: REG_DWORD, data: '1'} # Disables soft landing for Windows cloud content.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\System', value: 'AllowExperimentation', type: REG_DWORD, data: '0'} # Disables experimentation in policy settings for the current device.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\System', value: 'AllowLocation', type: REG_DWORD, data: '0'} # Disables location services for the current device.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\LocationAndSensors', value: 'DisableWindowsLocationProvider', type: REG_DWORD, data: '1'} # Disables Windows Location Provider.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\LocationAndSensors', value: 'DisableLocationScripting', type: REG_DWORD, data: '1'} # Disables location scripting.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\LocationAndSensors', value: 'DisableLocation', type: REG_DWORD, data: '1'} # Disables location services.
+- !registryValue {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel', value: 'GlobalTimerResolutionRequests', type: REG_DWORD, data: '1'} # Sets the global timer resolution requests to 1 in the kernel session manager.
+- !registryValue {path: 'HKLM\SYSTEM\ControlSet001\Control\PriorityControl', value: 'Win32PrioritySeparation', type: REG_DWORD, data: '40'} # Sets the Win32 priority separation to 40.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'HideOnlineAccountScreens', type: REG_DWORD, data: '1'} # Hides online account screens during Out-of-Box Experience (OOBE).
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'HideOnlineAccountScreens', type: REG_DWORD, data: '1'} # Hides online account screens during OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'HideEULAPage', type: REG_DWORD, data: '1'} # Hides the End User License Agreement (EULA) page during OOBE.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'HideEULAPage', type: REG_DWORD, data: '1'} # Hides the EULA page during OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'SkipMachineOOBE', type: REG_DWORD, data: '0'} # Does not skip the machine Out-of-Box Experience during OOBE.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'SkipMachineOOBE', type: REG_DWORD, data: '0'} # Does not skip the machine OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'SkipUserOOBE', type: REG_DWORD, data: '0'} # Does not skip the user OOBE during OOBE.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'SkipUserOOBE', type: REG_DWORD, data: '0'} # Does not skip the user OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'HideWirelessSetupInOOBE', type: REG_DWORD, data: '1'} # Hides wireless setup during OOBE.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'HideWirelessSetupInOOBE', type: REG_DWORD, data: '1'} # Hides wireless setup during OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'NetworkLocation', type: REG_SZ, data: 'Home'} # Sets the network location to 'Home' during OOBE.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'NetworkLocation', type: REG_SZ, data: 'Home'} # Sets the network location to 'Home' during OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'ProtectYourPC', type: REG_DWORD, data: '3'} # Sets the level of protection for the PC during OOBE to 3.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'ProtectYourPC', type: REG_DWORD, data: '3'} # Sets the level of protection for the PC during OOBE to 3 (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'HideLocalAccountScreen', type: REG_DWORD, data: '0'} # Does not hide the local account screen during OOBE.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'HideLocalAccountScreen', type: REG_DWORD, data: '0'} # Does not hide the local account screen during OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'DisablePrivacyExperience', type: REG_DWORD, data: '1'} # Disables privacy experience during OOBE.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'DisablePrivacyExperience', type: REG_DWORD, data: '1'} # Disables privacy experience during OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'HideOEMRegistrationScreen', type: REG_DWORD, data: '1'} # Hides the OEM registration screen during OOBE.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'HideOEMRegistrationScreen', type: REG_DWORD, data: '1'} # Hides the OEM registration screen during OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'EnableCortanaVoice', type: REG_DWORD, data: '0'} # Disables Cortana voice during OOBE
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'HideOnlineAccountScreens', type: REG_DWORD, data: '1'} # Hides online account screens during Out-of-Box Experience (OOBE).
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'HideOnlineAccountScreens', type: REG_DWORD, data: '1'} # Hides online account screens during OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'HideEULAPage', type: REG_DWORD, data: '1'} # Hides the End User License Agreement (EULA) page during OOBE.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'HideEULAPage', type: REG_DWORD, data: '1'} # Hides the EULA page during OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'SkipMachineOOBE', type: REG_DWORD, data: '0'} # Does not skip the machine Out-of-Box Experience during OOBE.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'SkipMachineOOBE', type: REG_DWORD, data: '0'} # Does not skip the machine OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'SkipUserOOBE', type: REG_DWORD, data: '0'} # Does not skip the user OOBE during OOBE.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'SkipUserOOBE', type: REG_DWORD, data: '0'} # Does not skip the user OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'HideWirelessSetupInOOBE', type: REG_DWORD, data: '1'} # Hides wireless setup during OOBE.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'HideWirelessSetupInOOBE', type: REG_DWORD, data: '1'} # Hides wireless setup during OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'NetworkLocation', type: REG_SZ, data: 'Home'} # Sets the network location to 'Home' during OOBE.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'NetworkLocation', type: REG_SZ, data: 'Home'} # Sets the network location to 'Home' during OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'ProtectYourPC', type: REG_DWORD, data: '3'} # Sets the level of protection for the PC during OOBE to 3.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'ProtectYourPC', type: REG_DWORD, data: '3'} # Sets the level of protection for the PC during OOBE to 3 (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'HideLocalAccountScreen', type: REG_DWORD, data: '0'} # Does not hide the local account screen during OOBE.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'HideLocalAccountScreen', type: REG_DWORD, data: '0'} # Does not hide the local account screen during OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'DisablePrivacyExperience', type: REG_DWORD, data: '1'} # Disables privacy experience during OOBE.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'DisablePrivacyExperience', type: REG_DWORD, data: '1'} # Disables privacy experience during OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'HideOEMRegistrationScreen', type: REG_DWORD, data: '1'} # Hides the OEM registration screen during OOBE.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'HideOEMRegistrationScreen', type: REG_DWORD, data: '1'} # Hides the OEM registration screen during OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'EnableCortanaVoice', type: REG_DWORD, data: '0'} # Disables Cortana voice during OOBE.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'EnableCortanaVoice', type: REG_DWORD, data: '0'} # Disables Cortana voice during OOBE (group policy).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'DisableVoice', type: REG_DWORD, data: '1'} # Disables voice during OOBE.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE', value: 'DisableVoice', type: REG_DWORD, data: '1'} # Disables voice during OOBE (group policy).
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderDocuments', type: REG_DWORD, data: '0'} # Prevents pinning of documents to Start menu.
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderDownloads', type: REG_DWORD, data: '0'} # Prevents pinning of downloads to Start menu.
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderFileExplorer', type: REG_DWORD, data: '0'} # Prevents pinning of File Explorer to Start menu.
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderHomeGroup', type: REG_DWORD, data: '0'} #Prevents pinning of HomeGroup to Start menu.
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderMusic', type: REG_DWORD, data: '0'} # Prevents pinning of music to Start menu.
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderNetwork', type: REG_DWORD, data: '0'} # Prevents pinning of network locations to Start menu.
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderPersonalFolder', type: REG_DWORD, data: '0'} #Prevents pinning of personal folders to Start menu.
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderPictures', type: REG_DWORD, data: '0'} # Prevents pinning of pictures to Start menu.
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderSettings', type: REG_DWORD, data: '1'} # Allows pinning of settings to Start menu.
+- !registryValue: {path: 'HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Start', value: 'AllowPinnedFolderVideos', type: REG_DWORD, data: '0'} # Prevents pinning of videos to Start menu.
+- !registryValue: {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer', value: 'EnableLegacyBalloonNotifications', type: REG_DWORD, data: '1'} # Enables legacy balloon notifications.
+- !registryValue: {path: 'HKCU\Software\Policies\Microsoft\Windows\Explorer', value: 'HidePeopleBar', type: REG_DWORD, data: '1'} # Hides People Bar.
+- !registryValue: {path: 'HKCU\Software\Policies\Microsoft\Windows\Explorer', value: 'HideSCAHealth', type: REG_DWORD, data: '1'} # Hides SCA health.
+- !registryValue: {path: 'HKCU\Software\Policies\Microsoft\Windows\Explorer', value: 'NoBalloonFeatureAdvertisements', type: REG_DWORD, data: '1'} # Disables balloon feature advertisements.
+- !registryValue: {path: 'HKCU\Software\Policies\Microsoft\Windows\Explorer', value: 'NoAutoTrayNotify', type: REG_DWORD, data: '1'} # Disables auto tray notify.
+- !registryValue: {path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer', value: 'HideSCAMeetNow', type: REG_DWORD, data: '1'} # Hides SCA Meet Now.
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\PushNotifications', value: 'NoCloudApplicationNotification', type: REG_DWORD, data: '1'} # Disables cloud application notifications.
+- !registryValue: {path: 'HKCU\Software\Policies\Microsoft\Windows\CurrentVersion\PushNotifications', value: 'NoToastApplicationNotification', type: REG_DWORD, data: '1'} # Disables toast application notifications.
+- !registryValue: {path: 'HKCU\Software\Policies\Microsoft\Windows\CurrentVersion\PushNotifications', value: 'NoToastApplicationNotificationOnLockScreen', type: REG_DWORD, data: '1'} # Disables toast application notifications on lock screen.
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds', value: 'EnableFeeds', type: REG_DWORD, data: '0'} # Disables Windows feeds.
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\WindowsInkWorkspace', value: 'AllowWindowsInkWorkspace', type: REG_DWORD, data: '1'} # Allows Windows Ink Workspace.
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\WindowsInkWorkspace', value: 'AllowSuggestedAppsInWindowsInkWorkspace', type: REG_DWORD, data: '0'} # Disables suggested apps in Windows Ink Workspace.
+- !registryValue: {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\Notifications', value: 'DisableEnhancedNotifications', type: REG_DWORD, data: '1'} # Disables enhanced notifications in Windows Defender Security Center.
+- !registryValue {path: 'HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate', value: 'UpdateNotificationLevel', type: REG_DWORD, data: '2'} #Sets update notification level.
+- !registryValue {path: 'HKLM\SYSTEM\Setup\LabConfig', value: 'BypassSecureBootCheck', type: REG_DWORD, data: '1'} # Bypasses Secure Boot check.
+- !registryValue {path: 'HKLM\SYSTEM\Setup\LabConfig', value: 'BypassTPMCheck', type: REG_DWORD, data: '1'} # Bypasses TPM (Trusted Platform Module) check.
+- !registryValue {path: 'HKLM\SYSTEM\Setup\LabConfig', value: 'BypassCPUCheck', type: REG_DWORD, data: '1'} # Bypasses CPU check.
+- !registryValue {path: 'HKLM\SYSTEM\Setup\LabConfig', value: 'BypassRAMCheck', type: REG_DWORD, data: '1'} # Bypasses RAM check.
+- !registryValue {path: 'HKLM\SYSTEM\Setup\LabConfig', value: 'BypassStorageCheck', type: REG_DWORD, data: '1'} # Bypasses storage check.
+- !registryValue {path: 'HKLM\SYSTEM\Setup\MoSetup', value: 'AllowUpgradesWithUnsupportedTPMOrCPU', type: REG_DWORD, data: '1'} # Allows upgrades with unsupported TPM or CPU.
+- !registryValue {path: 'HKCU\Control Panel\UnsupportedHardwareNotificationCache', value: 'SV1', type: REG_DWORD, data: '0'} # Cache for unsupported hardware notification - SV1.
+- !registryValue {path: 'HKCU\Control Panel\UnsupportedHardwareNotificationCache', value: 'SV2', type: REG_DWORD, data: '0'} # Cache for unsupported hardware notification - SV2.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE', value: 'BypassNRO', type: REG_DWORD, data: '1'} # Bypasses NRO (New Run Once) during Out-Of-Box Experience.
+- !registryValue {path: 'HKLM\SYSTEM\ControlSet001\Control\CrashControl', value: 'AutoReboot', type: REG_DWORD, data: '0'} #Disables automatic reboot after a system crash.
+- !registryValue {path: 'HKLM\SYSTEM\ControlSet001\Control\CrashControl', value: 'CrashDumpEnabled', type: REG_DWORD, data: '3'} # Enables crash dump creation on system crash.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent', value: 'DisableSoftLanding', type: REG_DWORD, data: '1'} #Disables soft landing of cloud content.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\TabletTip\1.7', value: 'EnableAutoShiftEngage', type: REG_DWORD, data: '0'} # Disables automatic shift engagement in TabletTip.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\TabletTip\1.7', value: 'EnableKeyAudioFeedback', type: REG_DWORD, data: '0'} # Disables key audio feedback in TabletTip.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\TabletTip\1.7', value: 'EnableShiftLock', type: REG_DWORD, data: '0'} # Disables shift lock in TabletTip.
+- !registryValue {path: 'HKCU\Control Panel\Cursors', value: 'GestureVisualization', type: REG_DWORD, data: '0'} # Disables gesture visualization.
+- !registryValue {path: 'HKCU\Control Panel\Cursors', value: 'ContactVisualization', type: REG_DWORD, data: '0'} # Disables contact visualization.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Shell\USB', value: 'NotifyOnUsbErrors', type: REG_DWORD, data: '0'} # Disables notifications on USB errors.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Shell\USB', value: 'NotifyOnWeakCharger', type: REG_DWORD, data: '0'} # Disables notifications on weak charger detection.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Multimedia\Audio', value: 'UserDuckingPreference', type: REG_DWORD, data: '3'} #Sets user preference for audio ducking.
+- !registryValue {path: 'HKCU\Control Panel\Desktop', value: 'FontSmoothing', type: REG_SZ, data: '2'} # Sets font smoothing.
+- !registryValue {path: 'HKCU\Control Panel\Desktop', value: 'UserPreferencesMask', type: REG_BINARY, data: '9012038010000000'} #Sets user preferences mask.
+- !registryValue {path: 'HKCU\Control Panel\Desktop', value: 'DragFullWindows', type: REG_SZ, data: '1'} # Enables dragging full windows.
+- !registryValue {path: 'HKCU\Control Panel\Desktop\WindowMetrics', value: 'MinAnimate', type: REG_SZ, data: '0'} # Disables window minimize/maximize animation.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'ListviewAlphaSelect', type: REG_DWORD, data: '1'} #Enables list view alpha select.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'IconsOnly', type: REG_DWORD, data: '0'} #Shows both icons and text in Explorer.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'TaskbarAnimations', type: REG_DWORD, data: '0'} #Disables taskbar animations.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'ListviewShadow', type: REG_DWORD, data: '1'} #Enables list view shadow.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects', value: 'VisualFXSetting', type: REG_DWORD, data: '3'} #Sets visual effects settings.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\DWM', value: 'EnableAeroPeek', type: REG_DWORD, data: '0'} #Disables Aero Peek.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\DWM', value: 'AlwaysHibernateThumbnails', type: REG_DWORD, data: '0'} #Disables hibernating thumbnails.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MultiTaskingView\AllUpView', value: 'Enabled', operation: delete} #Deletes the AllUpView key to disable a specific multitasking view.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced', value: 'ShowTaskViewButton', type: REG_DWORD, data: '0'} #Hides the Task View button in Windows Explorer.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer', value: 'HideSCAMeetNow', type: REG_DWORD, data: '1'} #Hides the "Meet Now" button in the system tray.
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System', value: 'DisableAutomaticRestartSignOn', type: REG_DWORD, data: '1'} #Disables automatic sign-on after a restart due to updates.
+- !registryValue {path: 'HKCU\Control Panel\Mouse', value: 'MouseSpeed', type: REG_SZ, data: '0'} # Sets the mouse speed to the minimum.
+- !registryValue {path: 'HKCU\Control Panel\Mouse', value: 'MouseThreshold1', type: REG_SZ, data: '0'} # Sets the threshold 1 value for mouse movement to the minimum.
+- !registryValue {path: 'HKCU\Control Panel\Mouse', value: 'MouseThreshold2', type: REG_SZ, data: '0'} # Sets the threshold 2 value for mouse movement to the minimum.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search', value: 'BingSearchEnabled', type: REG_DWORD, data: '0'} #Disables Bing search.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings', value: 'IsAADCloudSearchEnabled', type: REG_DWORD, data: '0'} #Disables Azure Active Directory cloud search.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings', value: 'IsDeviceSearchHistoryEnabled', type: REG_DWORD, data: '0'} #Disables device search history.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings', value: 'IsMSACloudSearchEnabled', type: REG_DWORD, data: '0'} #Disables Microsoft Search in Bing integration.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings', value: 'SafeSearchMode', type: REG_DWORD, data: '0'} # Sets SafeSearch mode to off.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search', value: 'ConnectedSearchUseWeb', type: REG_DWORD, data: '0'} # Disables web search in Windows Search.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search', value: 'DisableWebSearch', type: REG_DWORD, data: '1'} # Disables web search.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search', value: 'EnableDynamicContentInWSB', type: REG_DWORD, data: '0'} #Disables dynamic content in Windows Search Box.
+- !registryValue {path: 'HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer', value: 'DisableSearchBoxSuggestions', type: REG_DWORD, data: '1'} #Disables search box suggestions.
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search', value: 'SearchboxTaskbarMode', type: REG_DWORD, data: '1'} # Sets search as an icon on the taskbar.
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\Psched', value: 'TimerResolution', type: REG_DWORD, data: '1'} # Sets the timer resolution for the Packet Scheduler service to 1 millisecond.
+- !registryValue {path: 'HKLM\SYSTEM\CurrentControlSet\Services\NDIS\Parameters', value: 'DefaultPnPCapabilities', type: REG_DWORD, data: '24'} # Sets the default Plug and Play (PnP) capabilities for NDIS (Network Driver Interface Specification).
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\csrss.exe', value: 'CpuPriorityClass', data: '4', type: REG_DWORD} # Set realtime priority for csrss.exe
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\csrss.exe', value: 'IoPriority', data: '3', type: REG_DWORD} # Set IO priority for csrss.exe
+- !registryValue {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management', value: 'FeatureSettings', data: '1', type: REG_DWORD} # Enable Kernel-Managed Memory
+- !registryValue {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management', value: 'FeatureSettingsOverride', data: '3', type: REG_DWORD} # Set Kernel-Managed Memory override
+- !registryValue {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management', value: 'FeatureSettingsOverrideMask', data: '3', type: REG_DWORD} # Set Kernel-Managed Memory override mask
+- !registryValue {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management', value: 'DisablePagingExecutive', data: '1', type: REG_DWORD} # Disallow drivers to get paged into virtual memory
+- !registryValue {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management', value: 'LargeSystemCache', data: '1', type: REG_DWORD} # Use big system memory caching
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\csrss.exe\PerfOptions', value: 'CpuPriorityClass', data: '4', type: REG_SZ} # Set CPU priority class for csrss.exe
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\csrss.exe\PerfOptions', value: 'IoPriority', data: '3', type: REG_SZ} # Set IO priority for csrss.exe
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\csrss.exe\PerfOptions', value: 'CpuPriorityClass', data: '4', type: REG_DWORD} # Set csrss.exe priority to realtime
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\csrss.exe\PerfOptions', value: 'IoPriority', data: '3', type: REG_DWORD} # Set csrss.exe IO priority to high
+- !registryValue {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management', value: 'FeatureSettings', data: '1', type: REG_DWORD} # Enable Kernel-Managed Memory
+- !registryValue {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management', value: 'FeatureSettingsOverride', data: '3', type: REG_DWORD} # Disable Meltdown/Spectre patches
+- !registryValue {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management', value: 'FeatureSettingsOverrideMask', data: '3', type: REG_DWORD} # Disable Meltdown/Spectre patches
+- !registryValue {path: 'HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management', value: 'LargeSystemCache', data: '1', type: REG_DWORD} # Use big system memory caching to improve performance
+- !registryValue {path: 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability', value: 'TimeStampInterval', data: '1', type: REG_DWORD} # Set a reliable 1 ms timestamp
+- !registryValue {path: 'HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers', value: 'DpiMapIommuContiguous', data: '1', type: REG_DWORD} # Force contiguous memory allocation in DirectX Graphics Kernel
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection', value: 'AllowTelemetry', data: '0', type: REG_DWORD} # Enable Security-Only Telemetry
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat', value: 'AITEnable', data: '0', type: REG_DWORD} # Disable Application Telemetry
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting', value: 'Disabled', data: '1', type: REG_DWORD} # Disable Windows Error Reporting
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows Defender', value: 'DisableAntiSpyware', data: '1', type: REG_DWORD} # Disable Windows Defender Antivirus
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows Defender', value: 'DisableRoutinelyTakingAction', data: '1', type: REG_DWORD} # Disable Windows Defender Antivirus
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows Defender', value: 'ServiceKeepAlive', data: '0', type: REG_DWORD} # Disable Windows Defender Antivirus
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection', value: 'DisableBehaviorMonitoring', data: '1', type: REG_DWORD} # Disable Windows Defender Antivirus
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection', value: 'DisableIOAVProtection', data: '1', type: REG_DWORD} # Disable Windows Defender Antivirus
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection', value: 'DisableOnAccessProtection', data: '1', type: REG_DWORD} # Disable Windows Defender Antivirus
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection', value: 'DisableRealtimeMonitoring', data: '1', type: REG_DWORD} # Disable Windows Defender Antivirus
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Reporting', value: 'DisableEnhancedNotifications', data: '1', type: REG_DWORD} # Disable Windows Defender Antivirus
+- !registryValue {path: 'HKLM\SYSTEM\CurrentControlSet\Services\mouclass\Parameters', value: 'MouseDataQueueSize', data: '16', type: REG_DWORD} # Decrease mouse buffer size
+- !registryValue {path: 'HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters', value: 'KeyboardDataQueueSize', data: '16', type: REG_DWORD} # Decrease keyboard buffer size
+- !registryValue {path: 'HKLM\SOFTWARE\Policies\Microsoft\Windows', value: 'Windows Search\AllowCortana', data: '0', type: REG_DWORD} # Disable Cortana via registry
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search', value: 'BingSearchEnabled', data: '0', type: REG_DWORD} # Disable Cortana via Settings
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search', value: 'AllowSearchToUseLocation', data: '0', type: REG_DWORD} # Disable Cortana via Settings
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search', value: 'CortanaConsent', data: '0', type: REG_DWORD} # Disable Cortana via Settings
+- !registryValue {path: 'HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search', value: 'SearchboxTaskbarMode', data: '0', type: REG_DWORD} # Disable Cortana in the Taskbar
+- !registryValue {path: 'SOFTWARE\Policies\Microsoft\Windows\Explorer]', value: 'Explorer', data: '1', type: REG_DWORD} 
+
+

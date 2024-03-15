@@ -543,7 +543,3 @@ actions:
   - !registryValue: {path: 'HKLM\SOFTWARE\Classes\7-Zip.zip', value: '', data: 'zip Archive', type: REG_SZ}
   - !registryValue: {path: 'HKLM\SOFTWARE\Classes\7-Zip.zip\DefaultIcon', value: '', data: 'C:\Program Files\7-Zip\7z.dll,1', type: REG_SZ}
   - !registryValue: {path: 'HKLM\SOFTWARE\Classes\7-Zip.zip\shell\open\command', value: '', data: '"C:\Program Files\7-Zip\7zFM.exe" "%1"', type: REG_SZ}
-
-  - !file:
-    path: 'C:\Windows\SoftwareDistribution'
-    weight: 20

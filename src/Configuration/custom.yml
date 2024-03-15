@@ -9,3 +9,4 @@ features:
 - features\RefinedOS\appx.yml
 - features\RefinedOS\components.yml
 - features\RefinedOS\config.yml
+- features\RefinedOS\registry.yml
